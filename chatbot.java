@@ -357,7 +357,7 @@ void normal()
 }
 void Fun()
 {
-    String st1[] = {"Lassi","Rabdi Jalebi","Kesar Milk","Beer","Whiskey","having Date Night with Russian"};
+    String st1[] = {"Lassi","Rabdi Jalebi","Kesar Milk","Beer","Whiskey","Russian meal"};
     for(int i=0;i<st1.length;i++)
     {
         System.out.println((i+1)+"."+st1[i]);
