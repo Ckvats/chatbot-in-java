@@ -1,6 +1,6 @@
 # chatbot-in-java
 This projecct Developed for clg Project Subject Java Programming Cse 310 Developed by-
-1. Chandrakant Vashith 12113962
+1. Chandrakant 12113962
 2. Vivek  12101058
 3. Ritesh 12101076
 
