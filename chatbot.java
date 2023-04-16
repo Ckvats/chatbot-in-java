@@ -18,6 +18,7 @@ public class chatbot {
            String s1 = sc.nextLine();
            System.out.println("Do you want me to suggest you some food items according to your mood");
            System.out.println("(y/n)");
+         
         char m = sc.next().charAt(0);
            if(m=='y')
            {
@@ -39,6 +40,7 @@ public class chatbot {
             char c2 =sc.next().charAt(0);
             if(c2=='y')
             {
+               System.out.println("The name of the outlets are according to their ranking which is based on their reviews");
                c.loc();
             } 
             else{
@@ -78,7 +80,10 @@ public class chatbot {
             char c3 =sc.next().charAt(0);
             if(c3=='y')
             {
+                System.out.println("The name of the outlets are according to their ranking which is based on their reviews");
                 c.locbad();
+                
+
             } 
             else{
                 System.out.println("We hope you will find your fodd outlet");
@@ -117,6 +122,7 @@ public class chatbot {
             char c4 =sc.next().charAt(0);
             if(c4=='y')
             {
+                System.out.println("The name of the outlets are according to their ranking which is based on their reviews");
                c.locnormal();
             } 
             else{
@@ -156,6 +162,7 @@ public class chatbot {
             char c5 =sc.next().charAt(0);
             if(c5=='y')
             {
+              System.out.println("The name of the outlets are according to their ranking which is based on their reviews");
               c.locfun();
             } 
             else{
@@ -226,6 +233,7 @@ public class chatbot {
         char c1 = sc.next().charAt(0);
         if(c1=='y')
         {
+            System.out.println("The name of the outlets are according to their ranking which is based on their reviews");
           if(l==2 || l==9 || l==15 || l==21)
           {
             System.out.println("It is availabel at the following outlets:");
@@ -267,6 +275,7 @@ public class chatbot {
         }
         System.out.println("Do you want to order food you can pick it after:");
         System.out.println("(y/n)");
+        while(true){
         char t = sc.next().charAt(0);
         if(t=='y')
         {
@@ -291,12 +300,48 @@ public class chatbot {
             //     System.out.println("Total Price :"+b+"*"+p+"="+b*p);
             // }
         System.out.println("Total Price :"+b+"*90"+"="+b*90);
+        System.out.println("Do you want to conform your order: ");
+        System.out.println("(y/n)");
+        int k = 150;
+        while(true)
+        {
+        char f = sc.next().charAt(0);
+        if(f == 'y')
+        {
+      System.out.println("Your token number is: "+(k+b));
+      LocalDateTime time2 = LocalDateTime.now();
+      System.out.println("Your order recieved at: "+time2.getHour()+" hour "+time2.getMinute()+" minute");
+    //   System.out.println("\nbefore formating\n" +time2);
+    if(time2.getMinute()<40)
+    {
+     System.out.println("Your Order Will be ready at: "+time2.getHour()+" hour "+(time2.getMinute()+20)+" minute");
+    }
+    else{
+        System.out.println("Your Order Will be ready at: "+(time2.getHour()+1)+" hour "+((time2.getMinute()+20)%60)+" minute");
+    
+    }
+    break;
+        }
+        else if(f=='n')
+        {System.out.println("Your order has been canceled");
+    break;}
+        else{
+            System.out.println("Please enter correct Input");
+            
+        }
+    }
+        break;
         
         }
-        else
+        else if(t == 'n')
         {
             System.out.println("Thankyou for using our services");
+            break;
         }
+        else{
+            System.out.println("Please enter correct input");
+        }
+    }
        }
        else{
         System.out.println("Sorry! right now we don't have "+Dish);
@@ -307,16 +352,26 @@ public class chatbot {
     //    URL myUrl = new URL("https://www.zomato.com/");
     //    System.out.println("If you want to order you can click on this link: "+myUrl);
        System.out.println("Well do you find them helpful");
-            System.out.println("(y/n)");
+       System.out.println("(y/n)");
+
+       while(true)
+       {
+            
             char v2 = sc.next().charAt(0);
             if(v2=='y')
             {
                 System.out.println("Thanks for your feedback");
+                break;
             }
-            else{
+            else if(v2=='n'){
                 System.out.println("Sorry! if do not match your expectations");
                 System.out.println("Thanks for your feedback");
+                break;
             }
+            else{
+                System.out.println("Please enter correct input");
+            }
+        }
            
        
        i=1;
@@ -357,7 +412,7 @@ void normal()
 }
 void Fun()
 {
-    String st1[] = {"Lassi","Rabdi Jalebi","Kesar Milk","Beer","Whiskey","Russian meal"};
+    String st1[] = {"Lassi","Rabdi Jalebi","Kesar Milk","Beer","Whiskey","having Date Night with Russian"};
     for(int i=0;i<st1.length;i++)
     {
         System.out.println((i+1)+"."+st1[i]);
@@ -429,10 +484,12 @@ void order()
     }
     System.out.println("Do you want to conform your order: ");
     System.out.println("(y/n)");
+    while(true)
+    {
     char f = sc.next().charAt(0);
     if(f == 'y')
     {
-  System.out.println("Your token number is:- "+(k+b));
+  System.out.println("Your token number is: "+(k+b));
   LocalDateTime time2 = LocalDateTime.now();
   System.out.println("Your order recieved at: "+time2.getHour()+" hour "+time2.getMinute()+" minute");
 //   System.out.println("\nbefore formating\n" +time2);
@@ -444,10 +501,16 @@ else{
     System.out.println("Your Order Will be ready at: "+(time2.getHour()+1)+" hour "+((time2.getMinute()+20)%60)+" minute");
 
 }
+break;
     }
+    else if(f=='n')
+    {System.out.println("Your order has been canceled");
+break;}
     else{
-        System.out.println("Your order has been canceled");
+        System.out.println("Please enter correct Input");
+        
     }
+}
 
 }
 
