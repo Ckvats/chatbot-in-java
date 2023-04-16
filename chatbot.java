@@ -507,7 +507,7 @@ break;
     {System.out.println("Your order has been canceled");
 break;}
     else{
-        System.out.println("Please enter correct Input");
+        System.out.println("Please entr correct Input");
         
     }
 }
